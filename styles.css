@@ -7,6 +7,12 @@
     --bg-acc: #232323;
 }
 
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
 body {
     font-family: Helvetica, sans-serif;
     background-color: var(--bg-main);
@@ -18,7 +24,6 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
-    gap: 100px;
     height: 100vh; /* 100% of the users view height */
 }
 
@@ -29,13 +34,14 @@ body {
     width: 300px;
 }
 
-h1 {
-    font-size: 64px;
-    margin: 0 0 0 0;
+.title h1, 
+.title p {
+    text-align: right;
+    margin: 10px 100px 0 0;
 }
 
-h1,p {
-    text-align: right;
+h1 {
+    font-size: 64px;
 }
 
 h2 {
