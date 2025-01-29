@@ -8,14 +8,18 @@
 }
 
 body {
-    font-family: monospace, sans-serif;
+    font-family: Helvetica, sans-serif;
     background-color: var(--bg-main);
     color: var(--fg-main);
+    margin: 0;
+}
+
+.wrapper {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 100px;
     height: 100vh; /* 100% of the users view height */
-    margin: 0;
 }
 
 .container {
@@ -23,6 +27,15 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+}
+
+h1 {
+    font-size: 64px;
+    margin: 0 0 0 0;
+}
+
+h1,p {
+    text-align: right;
 }
 
 h2 {
