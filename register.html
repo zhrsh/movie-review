@@ -1,29 +1,27 @@
-<!-- 
- Group 3 SD:
- 1. Zahra A. S.
--->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Review</title>
+    <title>Movie Review - Sign up</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div class="title">
+        <h1>Movie<br>Review</h1>
+        <p>Sebuah aplikasi ulasan film</p>
+    </div>
     <div class="wrapper">
-        <div class="title">
-            <h1>Movie<br>Review</h1>
-            <p>Sebuah aplikasi ulasan film</p>
-        </div>
         <div class="container">
             <div id="loginForm">
-                <h2>Login to Movie Review</h2>
+                <h2>Create a Movie Review Account</h2>
                 <div class="form-group">
-                    <label for="loginEmail">Username or Email</label>
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginEmail">Username</label>
                     <input type="email" id="loginEmail" required>
                 </div>
                 <div class="form-group">
@@ -31,8 +29,9 @@
                     <input type="password" id="loginPassword" required>
                 </div>
             </div>
+            <button>Sign Up</button>
         </div>
-        <p></p>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
     </div>
 </body>
 </html>

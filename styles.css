@@ -2,7 +2,7 @@
 
 :root {
     --fg-main: white;
-    --fg-acc: #ba0016;
+    --fg-acc: #448ce3;
     --bg-main: #1b1b1b;
     --bg-acc: #232323;
 }
@@ -18,13 +18,16 @@ body {
     background-color: var(--bg-main);
     color: var(--fg-main);
     margin: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh; /* 100% of the users view height */
 }
 
 .wrapper {
     align-items: center;
     display: flex;
-    justify-content: center;
-    height: 100vh; /* 100% of the users view height */
+    flex-direction: column;
 }
 
 .container {
@@ -62,11 +65,7 @@ h2 {
     box-sizing: border-box;
 }
 
-.toggle {
-    text-align: center;
-    margin-top: 10px;
-}
-.toggle a {
+a {
     cursor: pointer;
     color: var(--fg-acc);
     text-decoration: underline;
