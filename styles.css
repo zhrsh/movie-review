@@ -3,6 +3,7 @@
 :root {
     --fg-main: white;
     --fg-acc: #448ce3;
+    --fg-acc-2: #0073ff;
     --bg-main: #1b1b1b;
     --bg-acc: #232323;
 }
@@ -31,10 +32,14 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     background: var(--bg-acc);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    justify-content: center;
+    align-items: center;
 }
 
 .title h1, 
@@ -60,13 +65,38 @@ h2 {
     margin-bottom: 5px;
 }
 .form-group input {
-    width: 100%;
+    width: 250px;
     padding: 8px;
     box-sizing: border-box;
+}
+
+button {
+    background: var(--fg-acc);
+    color: white;
+    border: none;
+    width: 250px;
+    padding: 10px 20px;
+    margin: 10px 0 0px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: var(--fg-acc-2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 a {
     cursor: pointer;
     color: var(--fg-acc);
     text-decoration: underline;
+    transition: all 0.5s ease;
+}
+
+a:hover {
+    color: var(--fg-acc-2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
