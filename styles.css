@@ -25,10 +25,15 @@ body {
     height: 100vh; /* 100% of the users view height */
 }
 
-.wrapper {
+.wrapper, 
+.index {
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+
+.index h1 {
+    margin-bottom: 10px;
 }
 
 .container {
