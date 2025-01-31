@@ -8,17 +8,67 @@
     --bg-acc: #1b1b1b;
 }
 
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-} */
+/* TAGS */
 
 body {
     font-family: Helvetica, sans-serif;
     background-color: var(--bg-main);
     color: var(--fg-main);
     margin: 0;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    text-align: center;
+}
+
+button {
+    background: var(--fg-acc);
+    color: var(--fg-main);
+    border: none;
+    width: 250px;
+    padding: 10px 20px;
+    margin: 10px 0 0px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: var(--fg-acc-2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+a {
+    cursor: pointer;
+    color: var(--fg-acc);
+    text-decoration: underline;
+    transition: all 0.5s ease;
+}
+
+a:hover {
+    color: var(--fg-acc-2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* CLASSES */
+
+/* wrapper for page fadein */
+.login-wrapper, 
+.index-wrapper,
+.movies-wrapper {
+    opacity: 0; /* start fully transparent */
+    animation: fadeIn 1s forwards; /* apply the fadeIn animation */
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* end fully opaque */
+    }
 }
 
 .login-wrapper, 
@@ -54,14 +104,6 @@ body {
     margin: 10px 100px 0 0;
 }
 
-h1 {
-    font-size: 64px;
-}
-
-h2 {
-    text-align: center;
-}
-
 .form-group {
     margin-bottom: 15px;
 }
@@ -74,37 +116,6 @@ h2 {
     width: 250px;
     padding: 8px;
     box-sizing: border-box;
-}
-
-button {
-    background: var(--fg-acc);
-    color: var(--fg-main);
-    border: none;
-    width: 250px;
-    padding: 10px 20px;
-    margin: 10px 0 0px 0;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-button:hover {
-    background: var(--fg-acc-2);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-a {
-    cursor: pointer;
-    color: var(--fg-acc);
-    text-decoration: underline;
-    transition: all 0.5s ease;
-}
-
-a:hover {
-    color: var(--fg-acc-2);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .top-bar {
@@ -144,6 +155,11 @@ a:hover {
     padding: 15px;
     width: 200px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.05);
 }
 
 .movie img {
