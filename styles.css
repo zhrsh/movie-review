@@ -4,8 +4,8 @@
     --fg-main: white;
     --fg-acc: #448ce3;
     --fg-acc-2: #0073ff;
-    --bg-main: #1b1b1b;
-    --bg-acc: #232323;
+    --bg-main: #141414;
+    --bg-acc: #1b1b1b;
 }
 
 /* * {
@@ -19,20 +19,21 @@ body {
     background-color: var(--bg-main);
     color: var(--fg-main);
     margin: 0;
-    align-items: center;
+}
+
+.login-wrapper, 
+.index-wrapper {
     display: flex;
+    align-items: center;
     justify-content: center;
     height: 100vh; /* 100% of the users view height */
 }
 
-.wrapper, 
-.index {
-    align-items: center;
-    display: flex;
+.index-wrapper {
     flex-direction: column;
 }
 
-.index h1 {
+.index-wrapper h1 {
     margin-bottom: 10px;
 }
 
@@ -77,7 +78,7 @@ h2 {
 
 button {
     background: var(--fg-acc);
-    color: white;
+    color: var(--fg-main);
     border: none;
     width: 250px;
     padding: 10px 20px;
@@ -104,4 +105,82 @@ a {
 a:hover {
     color: var(--fg-acc-2);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--bg-acc);
+    color: var(--fg-main);
+}
+
+.top-bar h2 {
+    margin: 0;
+}
+
+.top-bar input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.movie {
+    background: var(--bg-acc);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.movie img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.movie-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.movie-description {
+    font-size: 0.9em;
+    color: var(--fg-main);
+}
+
+.movie-rating {
+    font-weight: bold;
+    color: var(--fg-acc);
+}
+
+/* for smaller devices */
+@media (max-width: 768px) {
+
+    .title h1, 
+    .title p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .title p {
+        margin: 10px 0 60px 0;
+    }
+
+    .login-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 }
